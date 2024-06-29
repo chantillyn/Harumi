@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            overflow: hidden;
+            font-family: Arial, sans-serif;
+            color: aliceblue;
+        }
+
+        .video-background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1;
+        }
+
+        .content {
+            position: relative;
+            text-align: center;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            padding: 20px;
+            border-radius: 10px;
+            z-index: 1;
+        }
+
+        .content h1 {
+            color: white;
+            margin-bottom: 20px;
+        }
+
+        .buttons {
+            margin-top: 20px;
+        }
+
+        .buttons button {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border: none;
+            color: white;
+            padding: 10px 20px;
+            margin: 5px;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+
+        .buttons button:hover {
+            background: rgba(255, 255, 255, 0.3);
+        }
+
+        @media (max-width: 768px) {
+            .content {
+                padding: 10px;
+                width: 90%;
+            }
+
+            .content h1 {
+                font-size: 1.5em;
+            }
+
+            .content p {
+                font-size: 0.9em;
+            }
+
+            .buttons {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .buttons button {
+                width: 80%;
+                margin: 10px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <audio autoplay>
+        <source src="img/sindrama.m4a" type="audio/mp3">
+    </audio>
+    <video class="video-background" autoplay muted loop>
+        <source src="img/TruenoFondo.mp4" type="video/mp4">
+    </video>
+    <div class="content">
+        <h1>PARA MI ABEJITA🐝</h1>
+        <p>No sé cómo empezar todo esto, preciosa, pero después de estas semanas a tu lado, me he dado cuenta de que poco a poco me fui enamorando cada día más de ti. No sé por qué tú de mí, pero nunca me arrepentiré de contestarte esas notas o de subir a tu salón a arreglar esa computadora. Tampoco nunca me arrepentiré de haberte mentido con lo de la Halls, jajaja. Te amo. Amo cada parte de ti, amo tu personalidad tan diferente a la de los demás. Nunca había conocido a una persona como tú. Físicamente, me gusta todo de ti; cada parte de tu cuerpo me encanta. Creo que mi top 5 de cosas que más me gustan de ti son tus ojos, tus cachetes, tu abdomen, tu cintura y tu cabello. Amo estar contigo. Nunca me imaginé poder estar así contigo, principalmente porque sentía que eras payasa, pero nada de eso: eres un amor de persona, eres súper amable y cariñosa. Sé que no me conociste en las mejores circunstancias, y eso no habla muy bien de mí, pero créeme que contigo quiero hacer todo bien. Quiero estar mucho tiempo contigo. Yo creía que después de la primera vez que salimos, solo quedaría así, pero ese día sentí cosas diferentes por ti. Sentí una conexión especial contigo y no dudé en tomar la mejor decisión de mi vida: cortar algunos lazos para poder empezar una historia contigo. Quiero estar contigo siempre. Ya no quiero ser nada más tu UDI amigo con el que te besas. Quiero que seamos algo más, algo serio. No me importan los obstáculos que se nos atraviesen. Quiero ser la mejor versión de mí contigo y quiero hacerte muy feliz. Sabes que siempre voy a estar para ti en cualquier momento, no importa si es bueno o malo, siempre quiero estar para apoyarte.
+
+Respecto a lo de que ya no quiero ser solamente tu UDI amigo, yo quería hacerlo de una forma más especial o en persona, pero ya no aguanto más: solo quiero que seas mi novia. (Si quieres, también te lo pido en persona, sabes que haría cualquier cosa por ti). Pero eso, quiero que demos un paso más adelante, quiero que seas mi novia y por eso hice todo esto. Creo que ya es el momento para tener algo bien contigo.
+
+Entonces bien, ¿quieres ser mi lluvia y yo tu trueno? (JAJAJAJJA no se me ocurrió otra cosa ni modo de decirte como en La Rosa de Guadalupe "¿Quieres ser mi chava?" JAJAJAJAJJAJ).</p>
+        <div class="buttons">
+            <button id="no">No</button>
+            <a href="index.html"><button id="regresar">Regresar</button></a>
+            <button id="si">Sí</button>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('si').addEventListener('click', function() {
+            window.open('https://wa.me/525633702352?text= Sí, quiero ser tu lluvia y tú mi trueno 🌧️⚡', '_blank');
+        });
+
+        document.getElementById('no').addEventListener('click', function() {
+            window.close();
+        });
+    </script>
+</body>
+</html>
