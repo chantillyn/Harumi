@@ -11,14 +11,14 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            height: 100vh;
-            overflow: hidden;
+            min-height: 100vh;
+            overflow-x: hidden;
             font-family: Arial, sans-serif;
             color: aliceblue;
         }
 
         .video-background {
-            position: absolute;
+            position: fixed;
             top: 0;
             left: 0;
             width: 100%;
@@ -35,6 +35,9 @@
             padding: 20px;
             border-radius: 10px;
             z-index: 1;
+            max-width: 800px;
+            width: 90%;
+            margin: 20px;
         }
 
         .content h1 {
@@ -44,6 +47,10 @@
 
         .buttons {
             margin-top: 20px;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 10px;
         }
 
         .buttons button {
@@ -52,10 +59,10 @@
             border: none;
             color: white;
             padding: 10px 20px;
-            margin: 5px;
             cursor: pointer;
             border-radius: 5px;
             transition: background 0.3s;
+            min-width: 80px;
         }
 
         .buttons button:hover {
@@ -63,28 +70,39 @@
         }
 
         @media (max-width: 768px) {
+            body {
+                align-items: flex-start;
+                padding: 20px 0;
+            }
+            
             .content {
-                padding: 10px;
-                width: 90%;
+                padding: 15px;
+                margin: 10px;
+                max-height: 80vh;
+                overflow-y: auto;
             }
 
             .content h1 {
                 font-size: 1.5em;
+                margin-top: 10px;
             }
 
             .content p {
                 font-size: 0.9em;
+                margin-bottom: 15px;
             }
 
             .buttons {
                 display: flex;
-                flex-direction: column;
-                align-items: center;
+                justify-content: space-between;
+                width: 100%;
             }
 
-            .buttons button {
-                width: 80%;
-                margin: 10px 0;
+            .buttons button, .buttons a {
+                flex: 1;
+                margin: 0 5px;
+                font-size: 0.9em;
+                padding: 12px 0;
             }
         }
     </style>
@@ -93,7 +111,7 @@
     <audio autoplay>
         <source src="img\KHEA - FEELING (Visualizer) (mp3cut.net).mp3" type="audio/mp3">
     </audio>
-    <video class="video-background" autoplay muted loop>
+    <video class="video-background" autoplay muted loop playsinline>
         <source src="img/TruenoFondo.mp4" type="video/mp4">
     </video>
     <div class="content">
@@ -103,7 +121,6 @@
         De verdad perdoname por todo lo que ha pasado, hubiera deseado que fuera diferente, te sigo esperando porque estoy enamorado de ti, eres el amor de mi vida y si bien en algunos momentos he pensado en que no puedo mas, recordar los momentos contigo me da un poco de fuerza, eres el amor de mi vida y se que debes serlo por eso soy tan insistente, no es mentira al decirte que no habia amado a nadie de tal forma, sacaste cosas buenas de mi que ni yo sabia que tenia o podia, yo se que podemos estar juntos y resolver todo, aun quiero estar toda mi vida contigo, aun quiero vivir contigo, aun quiero cumplir contigo todas mis metas porque tu estabas en todo lo que queria y quiero hacer, mi vida ya no tendria ningun sentido sin ti y es lo que ha pasado estos meses, quiero que vuelvas mi amor, por favor quiero que regreses conmigo, quiero que volvamos a amarnos como lo haciamos, que seamos nuestra mejor version juntos y que cumplamos todo lo que algun dia nos prometimos.
         Te amo abejita
         Ya puedes/quieres ser mi noviecita hermosa otra vez?
-        
         </p>
         <div class="buttons">
             <button id="no">No</button>
