@@ -155,7 +155,13 @@ button:hover {
 #btn8 { background-image: url('img/Folklore.png'); }
 #btn9 { background-image: url('img/Evermore.png'); }
 #btn10 { background-image: url('img/Midnights.png'); }
-
+#btn11 { background-image: url('img/HS.png'); }
+#btn12 { background-image: url('img/HS7.png'); }
+#btn13 { background-image: url('img/HS5.png'); }
+#btn14 { background-image: url('img/HS4.png'); }
+#btn15 { background-image: url('img/HS3.png'); }
+#btn16 { background-image: url('img/HS8.png'); }
+#btn17 { background-image: url('img/HS2.png'); }
 .iframe-container {
     margin: 20px 0;
 }
